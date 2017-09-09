@@ -9,47 +9,24 @@
 import Foundation
 import UIKit
 
-class ImageLoader {
 
-    lazy var configuration: URLSessionConfiguration = .default
-    lazy var session: URLSession = URLSession(configuration: self.configuration)
-    
-    let url: NSURL
-    
-    init(url: NSURL) {
-        self.url = url 
-    }
-
-    func downloadImage(completion: @escaping ((Data) -> Void)) {
-        
-        let request = NSURLRequest(url: self.url as URL)
-        let dataTask = session.dataTask(with: request as URLRequest) { (data, response, error) in
-            
-            if error == nil {
-                
-                if let httpResponse = response as? HTTPURLResponse {
-                    
-                    switch (httpResponse.statusCode) {
-                        
-                    case 200:
-                        if let data = data {
-                            completion(data)
-                        }
-                        
-                    default:
-                        print("Status Code = \(httpResponse.statusCode)")
-                    }
-                }
-                
-            } else {
-                
-                //handle download error - Maybe show placeholder image
-                print("Error downloading data: \(error?.localizedDescription)")
+extension UIImageView {
+    func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() { () -> Void in
+                self.image = image
             }
-        }
-        
-        dataTask.resume()
+            }.resume()
+    }
+    func downloadedFrom(link: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloadedFrom(url: url, contentMode: mode)
     }
 }
-
 

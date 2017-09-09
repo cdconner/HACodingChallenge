@@ -16,15 +16,16 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
-    
+   
     var titleString:String!
     var dateAndTimeString:String!
     var cityString:String!
-    
+    var imageLocationString:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        convertDateFormatter(date: dateAndTimeString)
         title = titleString
         
         let backbutton = UIButton(type: .custom)
@@ -34,6 +35,20 @@ class DetailViewController: UIViewController {
         backbutton.addTarget(self, action: Selector(("backAction")), for: .touchUpInside)
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backbutton)
+        print(imageLocationString)
+        
+        if imageLocationString != nil {
+            if let url = URL.init(string: imageLocationString) {
+                imgView.downloadedFrom(url: url)
+            } else {
+                if imageLocationString == nil {
+                    let imgView = #imageLiteral(resourceName: "defaultPlaceholder.png")
+                }
+            }
+            imgView.layer.cornerRadius = 10
+            imgView.clipsToBounds = true
+            
+        }
     }
     
 
@@ -54,12 +69,27 @@ class DetailViewController: UIViewController {
 
     }
     
+    func convertDateFormatter(date: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        dateFormatter.timeZone = NSTimeZone(name: "UTC") as! TimeZone
+        
+        guard let date = dateFormatter.date(from: date) else {
+            assert(false, "no date from string")
+            return ""
+        }
+        
+        dateFormatter.dateFormat = "EEE, dd MMM hh:mm a"
+        dateFormatter.timeZone = TimeZone.current as! TimeZone
+        dateTimeLabel.text = dateFormatter.string(from: date)
+        return dateTimeLabel.text!
+    }
+    
+    
     func updateUI() {
         dateTimeLabel.text = dateAndTimeString
         locationLabel.text = cityString
         titleLabel.text = titleString
-        
-        
     }
     
 }

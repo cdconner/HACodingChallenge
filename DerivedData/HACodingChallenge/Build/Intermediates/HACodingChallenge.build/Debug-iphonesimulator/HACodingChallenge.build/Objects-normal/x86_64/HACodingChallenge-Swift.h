@@ -167,11 +167,13 @@ SWIFT_CLASS("_TtC17HACodingChallenge20DetailViewController")
 @property (nonatomic, copy) NSString * _Null_unspecified titleString;
 @property (nonatomic, copy) NSString * _Null_unspecified dateAndTimeString;
 @property (nonatomic, copy) NSString * _Null_unspecified cityString;
+@property (nonatomic, copy) NSString * _Null_unspecified imageLocationString;
 - (void)viewDidLoad;
 - (IBAction)backAction:(id _Nonnull)sender;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)viewWillDisappear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
+- (NSString * _Nonnull)convertDateFormatterWithDate:(NSString * _Nonnull)date SWIFT_WARN_UNUSED_RESULT;
 - (void)updateUI;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -184,8 +186,16 @@ SWIFT_CLASS("_TtC17HACodingChallenge13TableViewCell")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified titleLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified locationLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dateTimeLabel;
+@property (nonatomic, copy) NSString * _Null_unspecified imageLocationString;
+- (NSString * _Nonnull)convertDateFormatterWithDate:(NSString * _Nonnull)date SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface UIImageView (SWIFT_EXTENSION(HACodingChallenge))
+- (void)downloadedFromUrl:(NSURL * _Nonnull)url contentMode:(UIViewContentMode)mode;
+- (void)downloadedFromLink:(NSString * _Nonnull)link contentMode:(UIViewContentMode)mode;
 @end
 
 @class UISearchController;

@@ -15,16 +15,41 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var dateTimeLabel: UILabel!
     
-    func setEvent(event: Event) {
-        
+    var imageLocationString:String!
+    
+    func setEvent(event: Event) {   
         titleLabel.text = event.title
         locationLabel.text = event.location
-        dateTimeLabel.text = event.dateTime
+        imageLocationString = event.locationImage
         
-        // Still need to download and set image
+        if imageLocationString != nil {
+            if let url = URL.init(string: imageLocationString) {
+                imgView.downloadedFrom(url: url)
+            } else {
+                if imageLocationString == nil {
+                    let imgView = #imageLiteral(resourceName: "defaultPlaceholder.png")
+                }
+            }
+        }
         
+        imgView.layer.cornerRadius = 12
+        imgView.clipsToBounds = true
+    }
+    
+    func convertDateFormatter(date: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        dateFormatter.timeZone = NSTimeZone(name: "UTC") as! TimeZone
         
+        guard let date = dateFormatter.date(from: date) else {
+            assert(false, "no date from string")
+            return ""
+        }
         
+        dateFormatter.dateFormat = "EEE, dd MMM hh:mm a"
+        dateFormatter.timeZone = TimeZone.current as! TimeZone
+        dateTimeLabel.text = dateFormatter.string(from: date)
+        return dateTimeLabel.text!
     }
     
 }

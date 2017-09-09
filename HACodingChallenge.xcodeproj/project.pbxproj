@@ -17,6 +17,7 @@
 		A5A646DB1F6355AE003CF32D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A646DA1F6355AE003CF32D /* Event.swift */; };
 		A5A646DF1F6358BE003CF32D /* BackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A646DE1F6358BE003CF32D /* BackButton.png */; };
 		A5A646E11F636F69003CF32D /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A646E01F636F69003CF32D /* ImageDownloader.swift */; };
+		A5A646E51F6468BD003CF32D /* defaultPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A646E41F6468BD003CF32D /* defaultPlaceholder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A5A646DA1F6355AE003CF32D /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		A5A646DE1F6358BE003CF32D /* BackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButton.png; sourceTree = "<group>"; };
 		A5A646E01F636F69003CF32D /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		A5A646E41F6468BD003CF32D /* defaultPlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultPlaceholder.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				A55C5C251F60B44C000A46B8 /* LaunchScreen.storyboard */,
 				A55C5C281F60B44C000A46B8 /* Info.plist */,
 				A5A646DE1F6358BE003CF32D /* BackButton.png */,
+				A5A646E41F6468BD003CF32D /* defaultPlaceholder.png */,
 			);
 			path = HACodingChallenge;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 				A55C5C241F60B44C000A46B8 /* Assets.xcassets in Resources */,
 				A5A646DF1F6358BE003CF32D /* BackButton.png in Resources */,
 				A55C5C221F60B44C000A46B8 /* Main.storyboard in Resources */,
+				A5A646E51F6468BD003CF32D /* defaultPlaceholder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

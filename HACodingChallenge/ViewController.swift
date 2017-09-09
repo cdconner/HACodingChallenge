@@ -121,6 +121,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
         let event = myEvents[indexPath.row]
         cell.setEvent(event: event)
+        cell.convertDateFormatter(date: event.dateTime!)
         return cell
     }
     
@@ -134,6 +135,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         vc.titleString = event.title
         vc.dateAndTimeString = event.dateTime
         vc.cityString = event.location
+        vc.imageLocationString = event.locationImage
         
         navigationController?.pushViewController(vc, animated: true)
         
