@@ -40,6 +40,18 @@
 		<data>
 		UR4n0Bz7VbZ0MrAp5pxRyxX1EN4=
 		</data>
+		<key>Frameworks/SDWebImage.framework/Info.plist</key>
+		<data>
+		EFu83SZQqAcD+26qhC+uAhpB+Ss=
+		</data>
+		<key>Frameworks/SDWebImage.framework/SDWebImage</key>
+		<data>
+		AF9+fpevcI9ZLqU1niKfEyDAlGk=
+		</data>
+		<key>Frameworks/SDWebImage.framework/_CodeSignature/CodeResources</key>
+		<data>
+		7oMCw6I2qhJt/l79HgNPyUDaBI4=
+		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
 		+msuybEsPPMR2cLaC0bH4tCpSWA=
@@ -204,6 +216,39 @@
 			<key>hash2</key>
 			<data>
 			k/t3NocIts4aKM1cszGm7bY0KfjqgeXt+NnSlKoHXQE=
+			</data>
+		</dict>
+		<key>Frameworks/SDWebImage.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			EFu83SZQqAcD+26qhC+uAhpB+Ss=
+			</data>
+			<key>hash2</key>
+			<data>
+			4K+Gb2za8GXryBUyISe4PWQfSi5lS7e31hi6hWsplQs=
+			</data>
+		</dict>
+		<key>Frameworks/SDWebImage.framework/SDWebImage</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			AF9+fpevcI9ZLqU1niKfEyDAlGk=
+			</data>
+			<key>hash2</key>
+			<data>
+			vxeNM81dVJl8bXZpqWSEnXkkFT186Ohy374o9b8USkQ=
+			</data>
+		</dict>
+		<key>Frameworks/SDWebImage.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7oMCw6I2qhJt/l79HgNPyUDaBI4=
+			</data>
+			<key>hash2</key>
+			<data>
+			UrlxuDBfHfMI5Rwi9+mj/AD42fYGf6e0zxSVPcL7ewY=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCore.dylib</key>

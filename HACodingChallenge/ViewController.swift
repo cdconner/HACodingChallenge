@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchResultsUpdating {
     
@@ -15,6 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var myEvents: [Event] = []
     let searchController = UISearchController(searchResultsController: nil)
     let defaults = UserDefaults.standard
+    var imageUrl = URL.self
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -136,6 +138,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
         let event = myEvents[indexPath.row]
+        let imageUrl = URL(string: event.locationImage!)
+        cell.imgView.sd_setImage(with: imageUrl, placeholderImage:nil)
         cell.setEvent(event: event)
         cell.convertDateFormatter(date: event.dateTime!)
         cell.heartCheck()
