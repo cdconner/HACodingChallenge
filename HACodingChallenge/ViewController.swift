@@ -29,6 +29,10 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search for an event"
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = UIColor.white
+        UISearchBar.appearance().barTintColor = UIColor(colorLiteralRed: 34/255, green: 60/255, blue: 98/255, alpha: 1)
+        //UINavigationBar.appearance().barTintColor = UIColor(colorLiteralRed: 34/255, green: 60/255, blue: 98/255, alpha: 1)
         tableView.tableHeaderView = searchController.searchBar
         tableView.delegate = self
         tableView.dataSource = self
@@ -93,8 +97,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                         
                         
                         // Throw these items into my dictionary
-                        
-                        var tempDict: [String:Any?] = [
+                        let tempDict: [String:Any?] = [
                             "id": id,
                             "title": title,
                             "datetime_utc": dateTime,

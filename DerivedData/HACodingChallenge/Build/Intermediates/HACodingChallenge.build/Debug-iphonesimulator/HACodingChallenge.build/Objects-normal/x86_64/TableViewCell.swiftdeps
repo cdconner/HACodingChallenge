@@ -29,6 +29,7 @@ depends-top-level:
 - !private "StringLiteralType"
 - "TableViewCell"
 - !private "TimeZone"
+- !private "UIImage"
 - "UIImageView"
 - "UILabel"
 - "UITableViewCell"
@@ -40,6 +41,7 @@ depends-member:
 - !private ["Ps9AnyObject", "DateFormatter"]
 - !private ["Ps9AnyObject", "NSTimeZone"]
 - !private ["Ps9AnyObject", "TimeZone"]
+- !private ["Ps9AnyObject", "UIImage"]
 - !private ["Ps9AnyObject", "URL"]
 - ["Ps9AnyObject", "UserDefaults"]
 - !private ["Ps9AnyObject", "assert"]
@@ -74,6 +76,7 @@ depends-member:
 - !private ["PSo15CALayerDelegate", "DateFormatter"]
 - !private ["PSo15CALayerDelegate", "NSTimeZone"]
 - !private ["PSo15CALayerDelegate", "TimeZone"]
+- !private ["PSo15CALayerDelegate", "UIImage"]
 - !private ["PSo15CALayerDelegate", "URL"]
 - ["PSo15CALayerDelegate", "UserDefaults"]
 - !private ["PSo15CALayerDelegate", "assert"]
@@ -96,6 +99,7 @@ depends-member:
 - !private ["Ps7CVarArg", "DateFormatter"]
 - !private ["Ps7CVarArg", "NSTimeZone"]
 - !private ["Ps7CVarArg", "TimeZone"]
+- !private ["Ps7CVarArg", "UIImage"]
 - !private ["Ps7CVarArg", "URL"]
 - ["Ps7CVarArg", "UserDefaults"]
 - !private ["Ps7CVarArg", "assert"]
@@ -125,6 +129,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "DateFormatter"]
 - !private ["Ps28CustomDebugStringConvertible", "NSTimeZone"]
 - !private ["Ps28CustomDebugStringConvertible", "TimeZone"]
+- !private ["Ps28CustomDebugStringConvertible", "UIImage"]
 - !private ["Ps28CustomDebugStringConvertible", "URL"]
 - ["Ps28CustomDebugStringConvertible", "UserDefaults"]
 - !private ["Ps28CustomDebugStringConvertible", "assert"]
@@ -159,6 +164,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "DateFormatter"]
 - !private ["Ps23CustomStringConvertible", "NSTimeZone"]
 - !private ["Ps23CustomStringConvertible", "TimeZone"]
+- !private ["Ps23CustomStringConvertible", "UIImage"]
 - !private ["Ps23CustomStringConvertible", "URL"]
 - ["Ps23CustomStringConvertible", "UserDefaults"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
@@ -194,6 +200,7 @@ depends-member:
 - !private ["Ps9Equatable", "DateFormatter"]
 - !private ["Ps9Equatable", "NSTimeZone"]
 - !private ["Ps9Equatable", "TimeZone"]
+- !private ["Ps9Equatable", "UIImage"]
 - !private ["Ps9Equatable", "URL"]
 - ["Ps9Equatable", "UserDefaults"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
@@ -237,6 +244,7 @@ depends-member:
 - !private ["Ps8Hashable", "DateFormatter"]
 - !private ["Ps8Hashable", "NSTimeZone"]
 - !private ["Ps8Hashable", "TimeZone"]
+- !private ["Ps8Hashable", "UIImage"]
 - !private ["Ps8Hashable", "URL"]
 - ["Ps8Hashable", "UserDefaults"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
@@ -270,6 +278,7 @@ depends-member:
 - !private ["PSo8NSCoding", "DateFormatter"]
 - !private ["PSo8NSCoding", "NSTimeZone"]
 - !private ["PSo8NSCoding", "TimeZone"]
+- !private ["PSo8NSCoding", "UIImage"]
 - !private ["PSo8NSCoding", "URL"]
 - ["PSo8NSCoding", "UserDefaults"]
 - !private ["PSo8NSCoding", "assert"]
@@ -305,6 +314,7 @@ depends-member:
 - !private ["CSo8NSObject", "NSTimeZone"]
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "TimeZone"]
+- !private ["CSo8NSObject", "UIImage"]
 - ["CSo8NSObject", "UIImageView"]
 - ["CSo8NSObject", "UILabel"]
 - !private ["CSo8NSObject", "URL"]
@@ -337,6 +347,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "DateFormatter"]
 - !private ["PSo16NSObjectProtocol", "NSTimeZone"]
 - !private ["PSo16NSObjectProtocol", "TimeZone"]
+- !private ["PSo16NSObjectProtocol", "UIImage"]
 - !private ["PSo16NSObjectProtocol", "URL"]
 - ["PSo16NSObjectProtocol", "UserDefaults"]
 - !private ["PSo16NSObjectProtocol", "assert"]
@@ -375,6 +386,7 @@ depends-member:
 - !private ["C17HACodingChallenge13TableViewCell", "NSTimeZone"]
 - ["C17HACodingChallenge13TableViewCell", "String"]
 - !private ["C17HACodingChallenge13TableViewCell", "TimeZone"]
+- !private ["C17HACodingChallenge13TableViewCell", "UIImage"]
 - ["C17HACodingChallenge13TableViewCell", "UIImageView"]
 - ["C17HACodingChallenge13TableViewCell", "UILabel"]
 - !private ["C17HACodingChallenge13TableViewCell", "URL"]
@@ -399,6 +411,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "DateFormatter"]
 - !private ["PSo29UIAccessibilityIdentification", "NSTimeZone"]
 - !private ["PSo29UIAccessibilityIdentification", "TimeZone"]
+- !private ["PSo29UIAccessibilityIdentification", "UIImage"]
 - !private ["PSo29UIAccessibilityIdentification", "URL"]
 - ["PSo29UIAccessibilityIdentification", "UserDefaults"]
 - !private ["PSo29UIAccessibilityIdentification", "assert"]
@@ -420,6 +433,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "DateFormatter"]
 - !private ["PSo12UIAppearance", "NSTimeZone"]
 - !private ["PSo12UIAppearance", "TimeZone"]
+- !private ["PSo12UIAppearance", "UIImage"]
 - !private ["PSo12UIAppearance", "URL"]
 - ["PSo12UIAppearance", "UserDefaults"]
 - !private ["PSo12UIAppearance", "assert"]
@@ -441,6 +455,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "DateFormatter"]
 - !private ["PSo21UIAppearanceContainer", "NSTimeZone"]
 - !private ["PSo21UIAppearanceContainer", "TimeZone"]
+- !private ["PSo21UIAppearanceContainer", "UIImage"]
 - !private ["PSo21UIAppearanceContainer", "URL"]
 - ["PSo21UIAppearanceContainer", "UserDefaults"]
 - !private ["PSo21UIAppearanceContainer", "assert"]
@@ -463,6 +478,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "DateFormatter"]
 - !private ["PSo17UICoordinateSpace", "NSTimeZone"]
 - !private ["PSo17UICoordinateSpace", "TimeZone"]
+- !private ["PSo17UICoordinateSpace", "UIImage"]
 - !private ["PSo17UICoordinateSpace", "URL"]
 - ["PSo17UICoordinateSpace", "UserDefaults"]
 - !private ["PSo17UICoordinateSpace", "assert"]
@@ -484,6 +500,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "DateFormatter"]
 - !private ["PSo13UIDynamicItem", "NSTimeZone"]
 - !private ["PSo13UIDynamicItem", "TimeZone"]
+- !private ["PSo13UIDynamicItem", "UIImage"]
 - !private ["PSo13UIDynamicItem", "URL"]
 - ["PSo13UIDynamicItem", "UserDefaults"]
 - !private ["PSo13UIDynamicItem", "assert"]
@@ -505,6 +522,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "DateFormatter"]
 - !private ["PSo18UIFocusEnvironment", "NSTimeZone"]
 - !private ["PSo18UIFocusEnvironment", "TimeZone"]
+- !private ["PSo18UIFocusEnvironment", "UIImage"]
 - !private ["PSo18UIFocusEnvironment", "URL"]
 - ["PSo18UIFocusEnvironment", "UserDefaults"]
 - !private ["PSo18UIFocusEnvironment", "assert"]
@@ -526,6 +544,7 @@ depends-member:
 - !private ["PSo11UIFocusItem", "DateFormatter"]
 - !private ["PSo11UIFocusItem", "NSTimeZone"]
 - !private ["PSo11UIFocusItem", "TimeZone"]
+- !private ["PSo11UIFocusItem", "UIImage"]
 - !private ["PSo11UIFocusItem", "URL"]
 - ["PSo11UIFocusItem", "UserDefaults"]
 - !private ["PSo11UIFocusItem", "assert"]
@@ -547,6 +566,7 @@ depends-member:
 - !private ["PSo27UIGestureRecognizerDelegate", "DateFormatter"]
 - !private ["PSo27UIGestureRecognizerDelegate", "NSTimeZone"]
 - !private ["PSo27UIGestureRecognizerDelegate", "TimeZone"]
+- !private ["PSo27UIGestureRecognizerDelegate", "UIImage"]
 - !private ["PSo27UIGestureRecognizerDelegate", "URL"]
 - ["PSo27UIGestureRecognizerDelegate", "UserDefaults"]
 - !private ["PSo27UIGestureRecognizerDelegate", "assert"]
@@ -560,6 +580,7 @@ depends-member:
 - !private ["PSo27UIGestureRecognizerDelegate", "locationLabel"]
 - !private ["PSo27UIGestureRecognizerDelegate", "titleLabel"]
 - ["PSo27UIGestureRecognizerDelegate", ""]
+- !private ["CSo7UIImage", "init"]
 - !private ["CSo11UIImageView", "clipsToBounds"]
 - !private ["CSo11UIImageView", "downloadedFrom"]
 - !private ["CSo11UIImageView", "image"]
@@ -571,6 +592,7 @@ depends-member:
 - !private ["CSo11UIResponder", "NSTimeZone"]
 - ["CSo11UIResponder", "String"]
 - !private ["CSo11UIResponder", "TimeZone"]
+- !private ["CSo11UIResponder", "UIImage"]
 - ["CSo11UIResponder", "UIImageView"]
 - ["CSo11UIResponder", "UILabel"]
 - !private ["CSo11UIResponder", "URL"]
@@ -596,6 +618,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "DateFormatter"]
 - !private ["PSo30UIResponderStandardEditActions", "NSTimeZone"]
 - !private ["PSo30UIResponderStandardEditActions", "TimeZone"]
+- !private ["PSo30UIResponderStandardEditActions", "UIImage"]
 - !private ["PSo30UIResponderStandardEditActions", "URL"]
 - ["PSo30UIResponderStandardEditActions", "UserDefaults"]
 - !private ["PSo30UIResponderStandardEditActions", "assert"]
@@ -620,6 +643,7 @@ depends-member:
 - !private ["CSo15UITableViewCell", "NSTimeZone"]
 - ["CSo15UITableViewCell", "String"]
 - !private ["CSo15UITableViewCell", "TimeZone"]
+- !private ["CSo15UITableViewCell", "UIImage"]
 - ["CSo15UITableViewCell", "UIImageView"]
 - ["CSo15UITableViewCell", "UILabel"]
 - !private ["CSo15UITableViewCell", "URL"]
@@ -641,6 +665,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "DateFormatter"]
 - !private ["PSo18UITraitEnvironment", "NSTimeZone"]
 - !private ["PSo18UITraitEnvironment", "TimeZone"]
+- !private ["PSo18UITraitEnvironment", "UIImage"]
 - !private ["PSo18UITraitEnvironment", "URL"]
 - ["PSo18UITraitEnvironment", "UserDefaults"]
 - !private ["PSo18UITraitEnvironment", "assert"]
@@ -665,6 +690,7 @@ depends-member:
 - !private ["CSo6UIView", "NSTimeZone"]
 - ["CSo6UIView", "String"]
 - !private ["CSo6UIView", "TimeZone"]
+- !private ["CSo6UIView", "UIImage"]
 - ["CSo6UIView", "UIImageView"]
 - ["CSo6UIView", "UILabel"]
 - !private ["CSo6UIView", "URL"]
@@ -693,6 +719,7 @@ depends-member:
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "DateFormatter"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "NSTimeZone"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "TimeZone"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "UIImage"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "URL"]
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", "UserDefaults"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "assert"]
@@ -717,11 +744,13 @@ depends-member:
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
 - !private ["Ps34_ExpressibleByFileReferenceLiteral", "init"]
+- !private ["Ps26_ExpressibleByImageLiteral", "init"]
 - !private ["Ps33_ExpressibleByStringInterpolation", "init"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - !private ["Ps9_Hashable", "DateFormatter"]
 - !private ["Ps9_Hashable", "NSTimeZone"]
 - !private ["Ps9_Hashable", "TimeZone"]
+- !private ["Ps9_Hashable", "UIImage"]
 - !private ["Ps9_Hashable", "URL"]
 - ["Ps9_Hashable", "UserDefaults"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
@@ -799,6 +828,7 @@ depends-nominal:
 - "PSo18UIFocusEnvironment"
 - "PSo11UIFocusItem"
 - "PSo27UIGestureRecognizerDelegate"
+- !private "CSo7UIImage"
 - !private "CSo11UIImageView"
 - !private "CSo7UILabel"
 - "CSo11UIResponder"
@@ -815,6 +845,7 @@ depends-nominal:
 - !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
 - !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
 - !private "Ps34_ExpressibleByFileReferenceLiteral"
+- !private "Ps26_ExpressibleByImageLiteral"
 - !private "Ps33_ExpressibleByStringInterpolation"
 - !private "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"

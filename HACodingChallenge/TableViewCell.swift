@@ -31,9 +31,7 @@ class TableViewCell: UITableViewCell {
             if let url = URL.init(string: imageLocationString) {
                 imgView.downloadedFrom(url: url)
             } else {
-                if imageLocationString == nil {
-                    let imgView = #imageLiteral(resourceName: "defaultPlaceholder.png")
-                }
+                imgView.image = UIImage(imageLiteralResourceName: "defaultPlaceholder.png")
             }
         }
         

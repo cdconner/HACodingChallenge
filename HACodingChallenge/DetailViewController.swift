@@ -120,7 +120,7 @@ class DetailViewController: UIViewController {
         }
         
         dateFormatter.dateFormat = "EEE, dd MMM hh:mm a"
-        dateFormatter.timeZone = TimeZone.current as! TimeZone
+        dateFormatter.timeZone = TimeZone.current
         dateTimeLabel.text = dateFormatter.string(from: date)
         return dateTimeLabel.text!
     }
