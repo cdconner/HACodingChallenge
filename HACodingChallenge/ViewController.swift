@@ -14,30 +14,30 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     var newSearchText = "nothing"
     var myEvents: [Event] = []
     let searchController = UISearchController(searchResultsController: nil)
-    
-    
-    
-    
+    let defaults = UserDefaults.standard
     
     @IBOutlet weak var tableView: UITableView!
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         //This is for our UISearchController
         searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.dimsBackgroundDuringPresentation = false
         tableView.tableHeaderView = searchController.searchBar
         tableView.delegate = self
-        tableView.dataSource = self 
+        tableView.dataSource = self
     }
     
     //Any time a user types a character into the search field we will call the JSON handler and pass the new value
     func updateSearchResults(for searchController: UISearchController) {
+        myEvents.removeAll()
         if let searchText = searchController.searchBar.text, !searchText.isEmpty {
-            myEvents.removeAll()
             let newSearchText = searchText.replacingOccurrences(of: " ", with: "+") as String
             print(newSearchText)
             downloadJsonWithURL(searchText: newSearchText)
@@ -45,8 +45,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             print("No updates yet")
         }
         //self.tableView.reloadData()
-}
+    }
     
+    //This is where we call to get and then parse the JSON
     func downloadJsonWithURL(searchText: String) {
         
         // Building the URL
@@ -114,18 +115,20 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             
         }).resume()
     }
-
-   
     
+    
+    //Setting the number of rows that will appear in our tableview
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myEvents.count
     }
     
+    //Sending the data for the specific cells to render with the necessary info
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
         let event = myEvents[indexPath.row]
         cell.setEvent(event: event)
         cell.convertDateFormatter(date: event.dateTime!)
+        cell.heartCheck()
         return cell
     }
     
@@ -140,6 +143,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         vc.dateAndTimeString = event.dateTime
         vc.cityString = event.location
         vc.imageLocationString = event.locationImage
+        vc.eventIDString = event.id
         
         navigationController?.pushViewController(vc, animated: true)
         

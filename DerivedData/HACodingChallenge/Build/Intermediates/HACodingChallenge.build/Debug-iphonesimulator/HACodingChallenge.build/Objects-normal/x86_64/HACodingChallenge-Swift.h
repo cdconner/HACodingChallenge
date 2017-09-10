@@ -155,6 +155,7 @@ SWIFT_CLASS("_TtC17HACodingChallenge11AppDelegate")
 
 @class UIImageView;
 @class UILabel;
+@class NSUserDefaults;
 @class UIButton;
 @class NSBundle;
 @class NSCoder;
@@ -169,6 +170,7 @@ SWIFT_CLASS("_TtC17HACodingChallenge20DetailViewController")
 @property (nonatomic, copy) NSString * _Null_unspecified dateAndTimeString;
 @property (nonatomic, copy) NSString * _Null_unspecified cityString;
 @property (nonatomic, copy) NSString * _Null_unspecified imageLocationString;
+@property (nonatomic, readonly, strong) NSUserDefaults * _Nonnull defaults;
 - (void)viewDidLoad;
 - (IBAction)backAction:(id _Nonnull)sender;
 - (void)viewWillAppear:(BOOL)animated;
@@ -177,6 +179,7 @@ SWIFT_CLASS("_TtC17HACodingChallenge20DetailViewController")
 @property (nonatomic) BOOL buttonIsSelected;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified onOffButton;
 - (IBAction)onOffButtonTapped:(id _Nonnull)sender;
+- (void)heartCheck;
 - (void)updateOnOffButton;
 - (NSString * _Nonnull)convertDateFormatterWithDate:(NSString * _Nonnull)date SWIFT_WARN_UNUSED_RESULT;
 - (void)updateUI;
@@ -204,8 +207,11 @@ SWIFT_CLASS("_TtC17HACodingChallenge13TableViewCell")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified titleLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified locationLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified dateTimeLabel;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified heartBadge;
 @property (nonatomic, copy) NSString * _Null_unspecified imageLocationString;
+@property (nonatomic, readonly, strong) NSUserDefaults * _Nonnull defaults;
 - (NSString * _Nonnull)convertDateFormatterWithDate:(NSString * _Nonnull)date SWIFT_WARN_UNUSED_RESULT;
+- (void)heartCheck;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -224,7 +230,9 @@ SWIFT_CLASS("_TtC17HACodingChallenge14ViewController")
 @property (nonatomic, readonly, copy) NSString * _Nonnull baseURL;
 @property (nonatomic, copy) NSString * _Nonnull newSearchText;
 @property (nonatomic, readonly, strong) UISearchController * _Nonnull searchController;
+@property (nonatomic, readonly, strong) NSUserDefaults * _Nonnull defaults;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (void)updateSearchResultsForSearchController:(UISearchController * _Nonnull)searchController;
 - (void)downloadJsonWithURLWithSearchText:(NSString * _Nonnull)searchText;

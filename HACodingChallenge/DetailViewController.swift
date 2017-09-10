@@ -16,17 +16,20 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
-   
+    
     var titleString:String!
     var dateAndTimeString:String!
     var cityString:String!
     var imageLocationString:String!
+    var eventIDString:Int!
+    let defaults = UserDefaults.standard
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
         convertDateFormatter(date: dateAndTimeString)
-        updateOnOffButton()
+        heartCheck()
         title = titleString
         
         let backbutton = UIButton(type: .custom)
@@ -52,11 +55,11 @@ class DetailViewController: UIViewController {
         }
     }
     
-
+    //This is to create our fake back button
     @IBAction func backAction(_ sender: Any) {
         let _ = self.navigationController?.popViewController(animated: true)
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
     }
@@ -67,28 +70,45 @@ class DetailViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
+        
     }
     
+    //This is for the heart toggle button
     var buttonIsSelected = false
     @IBOutlet weak var onOffButton: UIButton!
     
-  
+    
     @IBAction func onOffButtonTapped(_ sender: Any) {
         buttonIsSelected = !buttonIsSelected
         updateOnOffButton()
     }
     
-    func updateOnOffButton() {
-        if buttonIsSelected {
+    func heartCheck() {
+        let eventID = "\(eventIDString)"
+        let isHearted = defaults.bool(forKey: eventID)
+        if isHearted == true {
             onOffButton.backgroundColor = UIColor.blue
-        }
-        else {
+        } else {
             onOffButton.backgroundColor = UIColor.white
         }
     }
-
     
+    func updateOnOffButton() {
+        let eventID = "\(eventIDString)"
+        let isHearted = defaults.bool(forKey: eventID)
+        if buttonIsSelected && isHearted != true {
+            onOffButton.backgroundColor = UIColor.blue
+            defaults.set(true, forKey: eventID)
+            print("Set Favorite")
+        }
+        else {
+            onOffButton.backgroundColor = UIColor.white
+            defaults.set(false, forKey: eventID)
+            print("Removed Favorite")
+        }
+    }
+    
+    //This is to convert the date and time string to conform with the requirement
     func convertDateFormatter(date: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
@@ -105,7 +125,7 @@ class DetailViewController: UIViewController {
         return dateTimeLabel.text!
     }
     
-    
+    //This is to fill in the text labels
     func updateUI() {
         dateTimeLabel.text = dateAndTimeString
         locationLabel.text = cityString

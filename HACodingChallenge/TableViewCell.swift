@@ -14,13 +14,18 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var dateTimeLabel: UILabel!
+    @IBOutlet weak var heartBadge: UIImageView!
     
     var imageLocationString:String!
-    
-    func setEvent(event: Event) {   
+    var eventIDString:Int!
+    let defaults = UserDefaults.standard
+
+    //This started out as a method to set the labels but I've overloaded it to load the image and to set the corner radius
+    func setEvent(event: Event) {
         titleLabel.text = event.title
         locationLabel.text = event.location
         imageLocationString = event.locationImage
+        eventIDString = event.id
         
         if imageLocationString != nil {
             if let url = URL.init(string: imageLocationString) {
@@ -36,6 +41,7 @@ class TableViewCell: UITableViewCell {
         imgView.clipsToBounds = true
     }
     
+    //This is to convert our date string to conform with the requirement (This probably belongs in an extension so I don't call it in two places)
     func convertDateFormatter(date: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
@@ -50,6 +56,17 @@ class TableViewCell: UITableViewCell {
         dateFormatter.timeZone = TimeZone.current as! TimeZone
         dateTimeLabel.text = dateFormatter.string(from: date)
         return dateTimeLabel.text!
+    }
+    
+    //Check to see if this property is favorited, and if so show the badge
+    func heartCheck() {
+        let eventID = "\(eventIDString)"
+        let isHearted = defaults.bool(forKey: eventID)
+        if isHearted == true {
+            heartBadge.backgroundColor = UIColor.blue
+        } else {
+            heartBadge.backgroundColor = UIColor.white
+        }
     }
     
 }

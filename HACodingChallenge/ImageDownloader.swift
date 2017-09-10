@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-
+//This is an extension to process the image URL from the JSON so that we get an actual image we can render in the tableView and DetailViewController
 extension UIImageView {
     func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
         contentMode = mode
