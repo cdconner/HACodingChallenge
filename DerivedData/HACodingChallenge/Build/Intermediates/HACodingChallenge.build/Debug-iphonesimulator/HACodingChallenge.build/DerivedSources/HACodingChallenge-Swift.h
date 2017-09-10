@@ -223,6 +223,7 @@ SWIFT_CLASS("_TtC17HACodingChallenge14ViewController")
 - (void)viewDidLoad;
 - (void)updateSearchResultsForSearchController:(UISearchController * _Nonnull)searchController;
 - (void)downloadJsonWithURLWithSearchText:(NSString * _Nonnull)searchText;
+- (void)updateTheTableView;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;

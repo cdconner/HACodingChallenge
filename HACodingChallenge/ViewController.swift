@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate, UISearchBarDelegate, UISearchResultsUpdating {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchResultsUpdating {
     
     let baseURL = "https://api.seatgeek.com/2/"
     var newSearchText = "nothing"
@@ -34,8 +34,10 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         UISearchBar.appearance().barTintColor = UIColor(colorLiteralRed: 34/255, green: 60/255, blue: 98/255, alpha: 1)
         //UINavigationBar.appearance().barTintColor = UIColor(colorLiteralRed: 34/255, green: 60/255, blue: 98/255, alpha: 1)
         tableView.tableHeaderView = searchController.searchBar
-        tableView.delegate = self
-        tableView.dataSource = self
+        DispatchQueue.main.async(execute: {() -> Void in
+            self.tableView.delegate = self
+            self.tableView.dataSource = self
+        })
     }
     
     //Any time a user types a character into the search field we will call the JSON handler and pass the new value
@@ -48,7 +50,6 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         } else {
             print("No updates yet")
         }
-        //self.tableView.reloadData()
     }
     
     //This is where we call to get and then parse the JSON
@@ -64,11 +65,11 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
         var request = URLRequest(url: url as! URL)
         
-        URLSession.shared.dataTask(with: (url as? URL)!, completionHandler: {(data, response, error) -> Void in
+        URLSession.shared.dataTask(with: (url!), completionHandler: {(data, response, error) -> Void in
             
             if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
-                print(jsonObj!.value(forKey: "events"))
-                
+//                print(jsonObj!.value(forKey: "events"))
+
                 // Pull out items we need
                 // Create temp dictionary
                 // Input into dictionary
@@ -91,7 +92,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                         let location = venueDict["display_location"] as! String
                         
                         let performersArray = event["performers"] as! [[String:Any]]
-                        let searchedItemDict = performersArray.first as! [String:Any]
+                        let searchedItemDict = performersArray.first!
                         
                         let locationImage = searchedItemDict["image"] as? String
                         
@@ -105,7 +106,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
                             "image": locationImage
                         ]
                         
-                        let newEvent = Event(data: tempDict)
+                        let newEvent = Event(data: tempDict as Any as! [String : Any])
                         
                         self.myEvents.append(newEvent)
                     }
@@ -117,6 +118,12 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             }
             
         }).resume()
+    }
+    
+    func updateTheTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     

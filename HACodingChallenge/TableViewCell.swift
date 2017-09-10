@@ -43,7 +43,7 @@ class TableViewCell: UITableViewCell {
     func convertDateFormatter(date: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-        dateFormatter.timeZone = NSTimeZone(name: "UTC") as! TimeZone
+        dateFormatter.timeZone = NSTimeZone(name: "UTC")! as TimeZone
         
         guard let date = dateFormatter.date(from: date) else {
             assert(false, "no date from string")
@@ -51,7 +51,7 @@ class TableViewCell: UITableViewCell {
         }
         
         dateFormatter.dateFormat = "EEE, dd MMM hh:mm a"
-        dateFormatter.timeZone = TimeZone.current as! TimeZone
+        dateFormatter.timeZone = TimeZone.current 
         dateTimeLabel.text = dateFormatter.string(from: date)
         return dateTimeLabel.text!
     }

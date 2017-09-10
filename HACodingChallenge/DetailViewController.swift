@@ -46,7 +46,7 @@ class DetailViewController: UIViewController {
                 imgView.downloadedFrom(url: url)
             } else {
                 if imageLocationString == nil {
-                    let imgView = #imageLiteral(resourceName: "defaultPlaceholder.png")
+                    imgView.image = #imageLiteral(resourceName: "defaultPlaceholder.png")
                 }
             }
             imgView.layer.cornerRadius = 10
@@ -112,7 +112,7 @@ class DetailViewController: UIViewController {
     func convertDateFormatter(date: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-        dateFormatter.timeZone = NSTimeZone(name: "UTC") as! TimeZone
+        dateFormatter.timeZone = NSTimeZone(name: "UTC")! as TimeZone
         
         guard let date = dateFormatter.date(from: date) else {
             assert(false, "no date from string")

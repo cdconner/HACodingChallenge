@@ -11,7 +11,7 @@ import UIKit
 
 //This is an extension to process the image URL from the JSON so that we get an actual image we can render in the tableView and DetailViewController
 extension UIImageView {
-    func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+    func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFill) {
         contentMode = mode
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
@@ -24,7 +24,7 @@ extension UIImageView {
             }
             }.resume()
     }
-    func downloadedFrom(link: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+    func downloadedFrom(link: String, contentMode mode: UIViewContentMode = .scaleAspectFill) {
         guard let url = URL(string: link) else { return }
         downloadedFrom(url: url, contentMode: mode)
     }

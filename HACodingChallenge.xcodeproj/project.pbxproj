@@ -20,6 +20,7 @@
 		A5A646E51F6468BD003CF32D /* defaultPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A646E41F6468BD003CF32D /* defaultPlaceholder.png */; };
 		A5A646EB1F64AEB9003CF32D /* heartUnselected.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A646EA1F64AEB9003CF32D /* heartUnselected.png */; };
 		A5A646F21F64DBCB003CF32D /* heartIsSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A646F11F64DBCB003CF32D /* heartIsSelected.png */; };
+		A5A646F71F65A8C9003CF32D /* JSONHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A646F61F65A8C9003CF32D /* JSONHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		A5A646E41F6468BD003CF32D /* defaultPlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultPlaceholder.png; sourceTree = "<group>"; };
 		A5A646EA1F64AEB9003CF32D /* heartUnselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartUnselected.png; sourceTree = "<group>"; };
 		A5A646F11F64DBCB003CF32D /* heartIsSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartIsSelected.png; sourceTree = "<group>"; };
+		A5A646F61F65A8C9003CF32D /* JSONHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONHandler.swift; path = ../JSONHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,12 +72,11 @@
 		A55C5C1B1F60B44C000A46B8 /* HACodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				A5A646F51F65A742003CF32D /* Models */,
+				A5A646F41F65A6DA003CF32D /* Views */,
 				A5A646EC1F64AED1003CF32D /* ImageAssets */,
 				A55C5C1C1F60B44C000A46B8 /* AppDelegate.swift */,
-				A55C5C1E1F60B44C000A46B8 /* ViewController.swift */,
-				A5A646DA1F6355AE003CF32D /* Event.swift */,
-				A5A646D41F60F1B3003CF32D /* DetailViewController.swift */,
-				A5A646D61F60F383003CF32D /* TableViewCell.swift */,
+				A5A646F61F65A8C9003CF32D /* JSONHandler.swift */,
 				A5A646E01F636F69003CF32D /* ImageDownloader.swift */,
 				A55C5C201F60B44C000A46B8 /* Main.storyboard */,
 				A55C5C231F60B44C000A46B8 /* Assets.xcassets */,
@@ -94,6 +95,24 @@
 				A5A646DE1F6358BE003CF32D /* BackButton.png */,
 			);
 			name = ImageAssets;
+			sourceTree = "<group>";
+		};
+		A5A646F41F65A6DA003CF32D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A55C5C1E1F60B44C000A46B8 /* ViewController.swift */,
+				A5A646D41F60F1B3003CF32D /* DetailViewController.swift */,
+				A5A646D61F60F383003CF32D /* TableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A5A646F51F65A742003CF32D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A5A646DA1F6355AE003CF32D /* Event.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +196,7 @@
 				A5A646D71F60F383003CF32D /* TableViewCell.swift in Sources */,
 				A55C5C1F1F60B44C000A46B8 /* ViewController.swift in Sources */,
 				A55C5C1D1F60B44C000A46B8 /* AppDelegate.swift in Sources */,
+				A5A646F71F65A8C9003CF32D /* JSONHandler.swift in Sources */,
 				A5A646E11F636F69003CF32D /* ImageDownloader.swift in Sources */,
 				A5A646DB1F6355AE003CF32D /* Event.swift in Sources */,
 			);

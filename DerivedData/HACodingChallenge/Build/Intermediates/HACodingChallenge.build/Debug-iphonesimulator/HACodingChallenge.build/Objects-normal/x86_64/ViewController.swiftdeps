@@ -13,6 +13,7 @@ provides-dynamic-lookup:
 - "searchController"
 - "tableView"
 - "updateSearchResults"
+- "updateTheTableView"
 - "viewDidLoad"
 - "viewWillAppear"
 depends-top-level:
@@ -976,6 +977,7 @@ depends-member:
 - !private ["CSo8NSObject", "titleString"]
 - ["CSo8NSObject", "updateSearchResults"]
 - ["CSo8NSObject", "updateSearchResultsForSearchController"]
+- ["CSo8NSObject", "updateTheTableView"]
 - !private ["CSo8NSObject", "value"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["CSo8NSObject", "viewForZooming"]
@@ -1551,6 +1553,7 @@ depends-member:
 - !private ["CSo11UIResponder", "titleString"]
 - ["CSo11UIResponder", "updateSearchResults"]
 - ["CSo11UIResponder", "updateSearchResultsForSearchController"]
+- ["CSo11UIResponder", "updateTheTableView"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["CSo11UIResponder", "viewForZooming"]
 - ["CSo11UIResponder", "viewForZoomingInScrollView"]
@@ -2152,6 +2155,7 @@ depends-member:
 - !private ["CSo16UIViewController", "titleString"]
 - ["CSo16UIViewController", "updateSearchResults"]
 - ["CSo16UIViewController", "updateSearchResultsForSearchController"]
+- ["CSo16UIViewController", "updateTheTableView"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", "viewForZooming"]
 - ["CSo16UIViewController", "viewForZoomingInScrollView"]
@@ -2240,6 +2244,7 @@ depends-member:
 - ["C17HACodingChallenge14ViewController", "tableView"]
 - ["C17HACodingChallenge14ViewController", "updateSearchResults"]
 - ["C17HACodingChallenge14ViewController", "updateSearchResultsForSearchController"]
+- ["C17HACodingChallenge14ViewController", "updateTheTableView"]
 - ["C17HACodingChallenge14ViewController", "viewDidLoad"]
 - ["C17HACodingChallenge14ViewController", "viewForZooming"]
 - ["C17HACodingChallenge14ViewController", "viewForZoomingInScrollView"]
@@ -2559,4 +2564,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-interface-hash: "13bfadab486d4c63dc93dd1968c37dfa"
+interface-hash: "d4adcfa8982f790a055f880ede9b60f5"
