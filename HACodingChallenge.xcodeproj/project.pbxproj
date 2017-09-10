@@ -18,9 +18,10 @@
 		A5A646DF1F6358BE003CF32D /* BackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A646DE1F6358BE003CF32D /* BackButton.png */; };
 		A5A646E11F636F69003CF32D /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A646E01F636F69003CF32D /* ImageDownloader.swift */; };
 		A5A646E51F6468BD003CF32D /* defaultPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A646E41F6468BD003CF32D /* defaultPlaceholder.png */; };
-		A5A646E91F64AEB5003CF32D /* heartSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A646E81F64AEB5003CF32D /* heartSelected.png */; };
 		A5A646EB1F64AEB9003CF32D /* heartUnselected.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A646EA1F64AEB9003CF32D /* heartUnselected.png */; };
 		A5A646F01F64BE2E003CF32D /* HeartedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A646EF1F64BE2E003CF32D /* HeartedButton.swift */; };
+		A5A646F21F64DBCB003CF32D /* heartIsSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A646F11F64DBCB003CF32D /* heartIsSelected.png */; };
+		A5A646F31F64DDA6003CF32D /* HACodingChallenge.app in Resources */ = {isa = PBXBuildFile; fileRef = A55C5C191F60B44C000A46B8 /* HACodingChallenge.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,9 +38,9 @@
 		A5A646DE1F6358BE003CF32D /* BackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButton.png; sourceTree = "<group>"; };
 		A5A646E01F636F69003CF32D /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		A5A646E41F6468BD003CF32D /* defaultPlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultPlaceholder.png; sourceTree = "<group>"; };
-		A5A646E81F64AEB5003CF32D /* heartSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartSelected.png; sourceTree = "<group>"; };
 		A5A646EA1F64AEB9003CF32D /* heartUnselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartUnselected.png; sourceTree = "<group>"; };
 		A5A646EF1F64BE2E003CF32D /* HeartedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartedButton.swift; sourceTree = "<group>"; };
+		A5A646F11F64DBCB003CF32D /* heartIsSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartIsSelected.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				A5A646EA1F64AEB9003CF32D /* heartUnselected.png */,
-				A5A646E81F64AEB5003CF32D /* heartSelected.png */,
+				A5A646F11F64DBCB003CF32D /* heartIsSelected.png */,
 				A5A646E41F6468BD003CF32D /* defaultPlaceholder.png */,
 				A5A646DE1F6358BE003CF32D /* BackButton.png */,
 			);
@@ -160,10 +161,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A55C5C271F60B44C000A46B8 /* LaunchScreen.storyboard in Resources */,
-				A5A646E91F64AEB5003CF32D /* heartSelected.png in Resources */,
 				A55C5C241F60B44C000A46B8 /* Assets.xcassets in Resources */,
 				A5A646DF1F6358BE003CF32D /* BackButton.png in Resources */,
 				A5A646EB1F64AEB9003CF32D /* heartUnselected.png in Resources */,
+				A5A646F31F64DDA6003CF32D /* HACodingChallenge.app in Resources */,
+				A5A646F21F64DBCB003CF32D /* heartIsSelected.png in Resources */,
 				A55C5C221F60B44C000A46B8 /* Main.storyboard in Resources */,
 				A5A646E51F6468BD003CF32D /* defaultPlaceholder.png in Resources */,
 			);

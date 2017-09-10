@@ -87,9 +87,9 @@ class DetailViewController: UIViewController {
         let eventID = "\(eventIDString)"
         let isHearted = defaults.bool(forKey: eventID)
         if isHearted == true {
-            onOffButton.backgroundColor = UIColor.blue
+            onOffButton.setBackgroundImage(#imageLiteral(resourceName: "heartIsSelected.png"), for: .normal)
         } else {
-            onOffButton.backgroundColor = UIColor.white
+            onOffButton.setBackgroundImage(#imageLiteral(resourceName: "heartUnselected.png"), for: .normal)
         }
     }
     
@@ -97,12 +97,12 @@ class DetailViewController: UIViewController {
         let eventID = "\(eventIDString)"
         let isHearted = defaults.bool(forKey: eventID)
         if buttonIsSelected && isHearted != true {
-            onOffButton.backgroundColor = UIColor.blue
+            onOffButton.setBackgroundImage(#imageLiteral(resourceName: "heartIsSelected.png"), for: .normal)
             defaults.set(true, forKey: eventID)
             print("Set Favorite")
         }
         else {
-            onOffButton.backgroundColor = UIColor.white
+            onOffButton.setBackgroundImage(#imageLiteral(resourceName: "heartUnselected.png"), for: .normal)
             defaults.set(false, forKey: eventID)
             print("Removed Favorite")
         }

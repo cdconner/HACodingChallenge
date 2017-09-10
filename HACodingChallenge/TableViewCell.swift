@@ -63,9 +63,9 @@ class TableViewCell: UITableViewCell {
         let eventID = "\(eventIDString)"
         let isHearted = defaults.bool(forKey: eventID)
         if isHearted == true {
-            heartBadge.backgroundColor = UIColor.blue
+            heartBadge.image = #imageLiteral(resourceName: "heartIsSelected.png")
         } else {
-            heartBadge.backgroundColor = UIColor.white
+            heartBadge.image = nil 
         }
     }
     
