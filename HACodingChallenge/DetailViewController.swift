@@ -26,6 +26,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         updateUI()
         convertDateFormatter(date: dateAndTimeString)
+        updateOnOffButton()
         title = titleString
         
         let backbutton = UIButton(type: .custom)
@@ -68,6 +69,25 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
 
     }
+    
+    var buttonIsSelected = false
+    @IBOutlet weak var onOffButton: UIButton!
+    
+  
+    @IBAction func onOffButtonTapped(_ sender: Any) {
+        buttonIsSelected = !buttonIsSelected
+        updateOnOffButton()
+    }
+    
+    func updateOnOffButton() {
+        if buttonIsSelected {
+            onOffButton.backgroundColor = UIColor.blue
+        }
+        else {
+            onOffButton.backgroundColor = UIColor.white
+        }
+    }
+
     
     func convertDateFormatter(date: String) -> String {
         let dateFormatter = DateFormatter()

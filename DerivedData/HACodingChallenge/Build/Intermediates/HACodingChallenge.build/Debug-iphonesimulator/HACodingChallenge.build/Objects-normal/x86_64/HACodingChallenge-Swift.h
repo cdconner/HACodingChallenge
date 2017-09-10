@@ -155,6 +155,7 @@ SWIFT_CLASS("_TtC17HACodingChallenge11AppDelegate")
 
 @class UIImageView;
 @class UILabel;
+@class UIButton;
 @class NSBundle;
 @class NSCoder;
 
@@ -173,8 +174,25 @@ SWIFT_CLASS("_TtC17HACodingChallenge20DetailViewController")
 - (void)viewWillAppear:(BOOL)animated;
 - (void)viewWillDisappear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
+@property (nonatomic) BOOL buttonIsSelected;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified onOffButton;
+- (IBAction)onOffButtonTapped:(id _Nonnull)sender;
+- (void)updateOnOffButton;
 - (NSString * _Nonnull)convertDateFormatterWithDate:(NSString * _Nonnull)date SWIFT_WARN_UNUSED_RESULT;
 - (void)updateUI;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC17HACodingChallenge13HeartedButton")
+@interface HeartedButton : UIViewController
+@property (nonatomic) BOOL buttonIsSelected;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified onOffButton;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (IBAction)onOffButtonTapped:(id _Nonnull)sender;
+- (void)updateOnOffButton;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

@@ -15,6 +15,10 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     var myEvents: [Event] = []
     let searchController = UISearchController(searchResultsController: nil)
     
+    
+    
+    
+    
     @IBOutlet weak var tableView: UITableView!
 
     

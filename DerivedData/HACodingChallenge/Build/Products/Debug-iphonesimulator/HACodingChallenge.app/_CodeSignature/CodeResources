@@ -22,7 +22,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/DetailViewController.nib</key>
 		<data>
-		wvuAgY3LpmviNYi7ddjv0FzqptQ=
+		CSpiRchKQhqL0wQQ0VSgZnf7gkM=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -30,15 +30,15 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-vql-O1-oZr.nib</key>
 		<data>
-		L1vDNx2Dq/FbmrDlxjZgXsFKYdg=
+		iN/winSpPq7Fx/KW6j0aPRXIrMQ=
 		</data>
 		<key>Base.lproj/Main.storyboardc/h5v-O2-CwI-view-U5I-OU-fhM.nib</key>
 		<data>
-		ctNOTKMegaFJZnkaSw6nSu73+/k=
+		q/ZjRSH6DkEJXWxWfu9OYPApvF8=
 		</data>
 		<key>Base.lproj/Main.storyboardc/ns1-oB-laV-view-bJv-Jc-FEu.nib</key>
 		<data>
-		tB2YTWOc7IYXZUf3RaoBFEnz1w0=
+		4PIgC+V9Laq+Dp5PRGnZK5MugFM=
 		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
@@ -91,6 +91,14 @@
 		<key>defaultPlaceholder.png</key>
 		<data>
 		xZuDM1KLOZWhdVv7dS5V1C4VMjg=
+		</data>
+		<key>heartSelected.png</key>
+		<data>
+		kHiZLfGpOwYrScYbXHo+V1HLYrA=
+		</data>
+		<key>heartUnselected.png</key>
+		<data>
+		GxKyEwQDVdJU6szBfGzfpp9i/tI=
 		</data>
 		<key>libswiftRemoteMirror.dylib</key>
 		<data>
@@ -147,11 +155,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wvuAgY3LpmviNYi7ddjv0FzqptQ=
+			CSpiRchKQhqL0wQQ0VSgZnf7gkM=
 			</data>
 			<key>hash2</key>
 			<data>
-			ABugMJJ39qLcKJpdwp46Jn5pmAm6wVnFzke42xUqZOw=
+			yvV6ByYz1XsPZI3nNBBz7Vqd/F9Q/cOj41p5sTcpXyI=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
@@ -169,33 +177,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			L1vDNx2Dq/FbmrDlxjZgXsFKYdg=
+			iN/winSpPq7Fx/KW6j0aPRXIrMQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			LhCbh6gPUOs7tKSe6qHA/jV9qXkq5a998YWcxCfbx4E=
+			QmrivNQ8grU2A/8BZ321LBKJGiVC5ZWVV3rV0SQYeGU=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/h5v-O2-CwI-view-U5I-OU-fhM.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ctNOTKMegaFJZnkaSw6nSu73+/k=
+			q/ZjRSH6DkEJXWxWfu9OYPApvF8=
 			</data>
 			<key>hash2</key>
 			<data>
-			jbXR4sj6bmnB2+AkOehnVoH6s8jlml2mB2AZh8Kj6oM=
+			65G/QE/UOTx3A6dXQJtA90gbeuQoghgJv6Ip/tFwzzo=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/ns1-oB-laV-view-bJv-Jc-FEu.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			tB2YTWOc7IYXZUf3RaoBFEnz1w0=
+			4PIgC+V9Laq+Dp5PRGnZK5MugFM=
 			</data>
 			<key>hash2</key>
 			<data>
-			0J2gki1r451yaNjP2ESKo1DPEEV/hBR4cH7JsAUfM8M=
+			hXLskPVTxl7hXANF9iv1UpvE0CVtjqpwo+4P2yigkAw=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCore.dylib</key>
@@ -317,6 +325,28 @@
 			<key>hash2</key>
 			<data>
 			hO66XaDq4Jga+oZeCpGXufzRQ0lbuEeUmoTCtZQBSLg=
+			</data>
+		</dict>
+		<key>heartSelected.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kHiZLfGpOwYrScYbXHo+V1HLYrA=
+			</data>
+			<key>hash2</key>
+			<data>
+			QAlqiYcPfCFIWLcdM9bz40BMYWVCNGBhrolOIg032uo=
+			</data>
+		</dict>
+		<key>heartUnselected.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GxKyEwQDVdJU6szBfGzfpp9i/tI=
+			</data>
+			<key>hash2</key>
+			<data>
+			5vjHCk8lP7KrDXGjhu52qpZzHUPdfjzm9lcp0z7vg6c=
 			</data>
 		</dict>
 		<key>libswiftRemoteMirror.dylib</key>
