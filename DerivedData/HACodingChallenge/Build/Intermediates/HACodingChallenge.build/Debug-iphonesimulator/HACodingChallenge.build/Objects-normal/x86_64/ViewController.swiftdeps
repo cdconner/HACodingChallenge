@@ -53,6 +53,7 @@ depends-top-level:
 - "UserDefaults"
 - "ViewController"
 - !private "Void"
+- !private "_ImageLiteralType"
 - !private "print"
 depends-member:
 - !private ["Ps9AnyObject", "DispatchQueue"]
@@ -2632,6 +2633,7 @@ depends-external:
 - "/Users/chrisconner/Desktop/HACodingChallenge/DerivedData/HACodingChallenge/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageOperation.h"
 - "/Users/chrisconner/Desktop/HACodingChallenge/DerivedData/HACodingChallenge/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIView+WebCacheOperation.h"
 - "/Users/chrisconner/Desktop/HACodingChallenge/DerivedData/HACodingChallenge/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageDownloaderOperation.h"
+- "/Users/chrisconner/Desktop/HACodingChallenge/HACodingChallenge/HACodingChallenge-Bridging-Header.h"
 - "/Users/chrisconner/Desktop/HACodingChallenge/DerivedData/HACodingChallenge/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageDownloader.h"
 - "/Users/chrisconner/Desktop/HACodingChallenge/DerivedData/HACodingChallenge/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageDecoder.h"
 - "/Users/chrisconner/Desktop/HACodingChallenge/DerivedData/HACodingChallenge/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageManager.h"

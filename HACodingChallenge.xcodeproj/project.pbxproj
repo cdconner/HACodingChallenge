@@ -44,6 +44,7 @@
 		A5A646EA1F64AEB9003CF32D /* heartUnselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartUnselected.png; sourceTree = "<group>"; };
 		A5A646F11F64DBCB003CF32D /* heartIsSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartIsSelected.png; sourceTree = "<group>"; };
 		A5A646F61F65A8C9003CF32D /* JSONHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONHandler.swift; path = ../JSONHandler.swift; sourceTree = "<group>"; };
+		A5B271FE1F65E8B700A9117C /* HACodingChallenge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HACodingChallenge-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +120,7 @@
 				A55C5C1E1F60B44C000A46B8 /* ViewController.swift */,
 				A5A646D41F60F1B3003CF32D /* DetailViewController.swift */,
 				A5A646D61F60F383003CF32D /* TableViewCell.swift */,
+				A5B271FE1F65E8B700A9117C /* HACodingChallenge-Bridging-Header.h */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -175,6 +177,7 @@
 					A55C5C181F60B44C000A46B8 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = BJT8QVT53Y;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -403,11 +406,14 @@
 			baseConfigurationReference = 4755E7607E11368402FBF7F5 /* Pods-HACodingChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = BJT8QVT53Y;
 				INFOPLIST_FILE = HACodingChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.chrisconner.HACodingChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HACodingChallenge/HACodingChallenge-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -417,11 +423,13 @@
 			baseConfigurationReference = 269D4FFDB937BC2B4EEC1CB3 /* Pods-HACodingChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = BJT8QVT53Y;
 				INFOPLIST_FILE = HACodingChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.chrisconner.HACodingChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HACodingChallenge/HACodingChallenge-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

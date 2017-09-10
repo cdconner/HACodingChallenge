@@ -9,7 +9,6 @@ provides-dynamic-lookup:
 - "baseURL"
 - "defaults"
 - "downloadJsonWithURL"
-- "imageURL"
 - "newSearchText"
 - "searchController"
 - "tableView"
@@ -19,7 +18,6 @@ provides-dynamic-lookup:
 - "viewWillAppear"
 depends-top-level:
 - !private "!"
-- !private "!="
 - !private "+"
 - !private "/"
 - !private "Array"
@@ -48,13 +46,14 @@ depends-top-level:
 - "UITableViewDataSource"
 - "UITableViewDelegate"
 - "UIViewController"
-- !private "URL"
+- "URL"
 - !private "URLRequest"
 - !private "URLSession"
 - !private "UnicodeScalarType"
 - "UserDefaults"
 - "ViewController"
 - !private "Void"
+- !private "_ImageLiteralType"
 - !private "print"
 depends-member:
 - !private ["Ps9AnyObject", "DispatchQueue"]
@@ -64,7 +63,7 @@ depends-member:
 - !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UISearchBar"]
 - ["Ps9AnyObject", "UISearchController"]
-- !private ["Ps9AnyObject", "URL"]
+- ["Ps9AnyObject", "URL"]
 - !private ["Ps9AnyObject", "URLRequest"]
 - !private ["Ps9AnyObject", "URLSession"]
 - ["Ps9AnyObject", "UserDefaults"]
@@ -187,7 +186,7 @@ depends-member:
 - !private ["Ps7CVarArg", "UIColor"]
 - !private ["Ps7CVarArg", "UISearchBar"]
 - ["Ps7CVarArg", "UISearchController"]
-- !private ["Ps7CVarArg", "URL"]
+- ["Ps7CVarArg", "URL"]
 - !private ["Ps7CVarArg", "URLRequest"]
 - !private ["Ps7CVarArg", "URLSession"]
 - ["Ps7CVarArg", "UserDefaults"]
@@ -294,7 +293,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UISearchBar"]
 - ["Ps28CustomDebugStringConvertible", "UISearchController"]
-- !private ["Ps28CustomDebugStringConvertible", "URL"]
+- ["Ps28CustomDebugStringConvertible", "URL"]
 - !private ["Ps28CustomDebugStringConvertible", "URLRequest"]
 - !private ["Ps28CustomDebugStringConvertible", "URLSession"]
 - ["Ps28CustomDebugStringConvertible", "UserDefaults"]
@@ -407,7 +406,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UISearchBar"]
 - ["Ps23CustomStringConvertible", "UISearchController"]
-- !private ["Ps23CustomStringConvertible", "URL"]
+- ["Ps23CustomStringConvertible", "URL"]
 - !private ["Ps23CustomStringConvertible", "URLRequest"]
 - !private ["Ps23CustomStringConvertible", "URLSession"]
 - ["Ps23CustomStringConvertible", "UserDefaults"]
@@ -516,7 +515,7 @@ depends-member:
 - !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UISearchBar"]
 - ["Ps9Equatable", "UISearchController"]
-- !private ["Ps9Equatable", "URL"]
+- ["Ps9Equatable", "URL"]
 - !private ["Ps9Equatable", "URLRequest"]
 - !private ["Ps9Equatable", "URLSession"]
 - ["Ps9Equatable", "UserDefaults"]
@@ -636,7 +635,7 @@ depends-member:
 - !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UISearchBar"]
 - ["Ps8Hashable", "UISearchController"]
-- !private ["Ps8Hashable", "URL"]
+- ["Ps8Hashable", "URL"]
 - !private ["Ps8Hashable", "URLRequest"]
 - !private ["Ps8Hashable", "URLSession"]
 - ["Ps8Hashable", "UserDefaults"]
@@ -745,7 +744,7 @@ depends-member:
 - !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UISearchBar"]
 - ["PSo8NSCoding", "UISearchController"]
-- !private ["PSo8NSCoding", "URL"]
+- ["PSo8NSCoding", "URL"]
 - !private ["PSo8NSCoding", "URLRequest"]
 - !private ["PSo8NSCoding", "URLSession"]
 - ["PSo8NSCoding", "UserDefaults"]
@@ -836,7 +835,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "UIColor"]
 - !private ["PSo26NSExtensionRequestHandling", "UISearchBar"]
 - ["PSo26NSExtensionRequestHandling", "UISearchController"]
-- !private ["PSo26NSExtensionRequestHandling", "URL"]
+- ["PSo26NSExtensionRequestHandling", "URL"]
 - !private ["PSo26NSExtensionRequestHandling", "URLRequest"]
 - !private ["PSo26NSExtensionRequestHandling", "URLSession"]
 - ["PSo26NSExtensionRequestHandling", "UserDefaults"]
@@ -915,7 +914,7 @@ depends-member:
 - ["CSo8NSObject", "UISearchController"]
 - ["CSo8NSObject", "UITableView"]
 - ["CSo8NSObject", "UITableViewCell"]
-- !private ["CSo8NSObject", "URL"]
+- ["CSo8NSObject", "URL"]
 - !private ["CSo8NSObject", "URLRequest"]
 - !private ["CSo8NSObject", "URLSession"]
 - ["CSo8NSObject", "UserDefaults"]
@@ -939,7 +938,7 @@ depends-member:
 - !private ["CSo8NSObject", "heartCheck"]
 - !private ["CSo8NSObject", "hidesNavigationBarDuringPresentation"]
 - !private ["CSo8NSObject", "imageLocationString"]
-- ["CSo8NSObject", "imageURL"]
+- ["CSo8NSObject", "imageUrl"]
 - !private ["CSo8NSObject", "imgView"]
 - ["CSo8NSObject", "indexPathForPreferredFocusedView"]
 - ["CSo8NSObject", "indexPathForPreferredFocusedViewInTableView"]
@@ -1012,7 +1011,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UISearchBar"]
 - ["PSo16NSObjectProtocol", "UISearchController"]
-- !private ["PSo16NSObjectProtocol", "URL"]
+- ["PSo16NSObjectProtocol", "URL"]
 - !private ["PSo16NSObjectProtocol", "URLRequest"]
 - !private ["PSo16NSObjectProtocol", "URLSession"]
 - ["PSo16NSObjectProtocol", "UserDefaults"]
@@ -1181,7 +1180,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
 - !private ["PSo21UIAppearanceContainer", "UISearchBar"]
 - ["PSo21UIAppearanceContainer", "UISearchController"]
-- !private ["PSo21UIAppearanceContainer", "URL"]
+- ["PSo21UIAppearanceContainer", "URL"]
 - !private ["PSo21UIAppearanceContainer", "URLRequest"]
 - !private ["PSo21UIAppearanceContainer", "URLSession"]
 - ["PSo21UIAppearanceContainer", "UserDefaults"]
@@ -1268,7 +1267,7 @@ depends-member:
 - !private ["PSo24UIBarPositioningDelegate", "UIColor"]
 - !private ["PSo24UIBarPositioningDelegate", "UISearchBar"]
 - ["PSo24UIBarPositioningDelegate", "UISearchController"]
-- !private ["PSo24UIBarPositioningDelegate", "URL"]
+- ["PSo24UIBarPositioningDelegate", "URL"]
 - !private ["PSo24UIBarPositioningDelegate", "URLRequest"]
 - !private ["PSo24UIBarPositioningDelegate", "URLSession"]
 - ["PSo24UIBarPositioningDelegate", "UserDefaults"]
@@ -1323,7 +1322,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "UIColor"]
 - !private ["PSo18UIContentContainer", "UISearchBar"]
 - ["PSo18UIContentContainer", "UISearchController"]
-- !private ["PSo18UIContentContainer", "URL"]
+- ["PSo18UIContentContainer", "URL"]
 - !private ["PSo18UIContentContainer", "URLRequest"]
 - !private ["PSo18UIContentContainer", "URLSession"]
 - ["PSo18UIContentContainer", "UserDefaults"]
@@ -1416,7 +1415,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
 - !private ["PSo18UIFocusEnvironment", "UISearchBar"]
 - ["PSo18UIFocusEnvironment", "UISearchController"]
-- !private ["PSo18UIFocusEnvironment", "URL"]
+- ["PSo18UIFocusEnvironment", "URL"]
 - !private ["PSo18UIFocusEnvironment", "URLRequest"]
 - !private ["PSo18UIFocusEnvironment", "URLSession"]
 - ["PSo18UIFocusEnvironment", "UserDefaults"]
@@ -1524,7 +1523,7 @@ depends-member:
 - ["CSo11UIResponder", "UISearchController"]
 - ["CSo11UIResponder", "UITableView"]
 - ["CSo11UIResponder", "UITableViewCell"]
-- !private ["CSo11UIResponder", "URL"]
+- ["CSo11UIResponder", "URL"]
 - !private ["CSo11UIResponder", "URLRequest"]
 - !private ["CSo11UIResponder", "URLSession"]
 - ["CSo11UIResponder", "UserDefaults"]
@@ -1546,7 +1545,7 @@ depends-member:
 - !private ["CSo11UIResponder", "heartCheck"]
 - !private ["CSo11UIResponder", "hidesNavigationBarDuringPresentation"]
 - !private ["CSo11UIResponder", "imageLocationString"]
-- ["CSo11UIResponder", "imageURL"]
+- ["CSo11UIResponder", "imageUrl"]
 - !private ["CSo11UIResponder", "imgView"]
 - ["CSo11UIResponder", "indexPathForPreferredFocusedView"]
 - ["CSo11UIResponder", "indexPathForPreferredFocusedViewInTableView"]
@@ -1608,7 +1607,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "UIColor"]
 - !private ["PSo30UIResponderStandardEditActions", "UISearchBar"]
 - ["PSo30UIResponderStandardEditActions", "UISearchController"]
-- !private ["PSo30UIResponderStandardEditActions", "URL"]
+- ["PSo30UIResponderStandardEditActions", "URL"]
 - !private ["PSo30UIResponderStandardEditActions", "URLRequest"]
 - !private ["PSo30UIResponderStandardEditActions", "URLSession"]
 - ["PSo30UIResponderStandardEditActions", "UserDefaults"]
@@ -1692,7 +1691,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "UIColor"]
 - !private ["PSo20UIScrollViewDelegate", "UISearchBar"]
 - ["PSo20UIScrollViewDelegate", "UISearchController"]
-- !private ["PSo20UIScrollViewDelegate", "URL"]
+- ["PSo20UIScrollViewDelegate", "URL"]
 - !private ["PSo20UIScrollViewDelegate", "URLRequest"]
 - !private ["PSo20UIScrollViewDelegate", "URLSession"]
 - ["PSo20UIScrollViewDelegate", "UserDefaults"]
@@ -1749,7 +1748,7 @@ depends-member:
 - !private ["PSo19UISearchBarDelegate", "UIColor"]
 - !private ["PSo19UISearchBarDelegate", "UISearchBar"]
 - ["PSo19UISearchBarDelegate", "UISearchController"]
-- !private ["PSo19UISearchBarDelegate", "URL"]
+- ["PSo19UISearchBarDelegate", "URL"]
 - !private ["PSo19UISearchBarDelegate", "URLRequest"]
 - !private ["PSo19UISearchBarDelegate", "URLSession"]
 - ["PSo19UISearchBarDelegate", "UserDefaults"]
@@ -1808,7 +1807,7 @@ depends-member:
 - !private ["PSo23UISearchResultsUpdating", "UIColor"]
 - !private ["PSo23UISearchResultsUpdating", "UISearchBar"]
 - ["PSo23UISearchResultsUpdating", "UISearchController"]
-- !private ["PSo23UISearchResultsUpdating", "URL"]
+- ["PSo23UISearchResultsUpdating", "URL"]
 - !private ["PSo23UISearchResultsUpdating", "URLRequest"]
 - !private ["PSo23UISearchResultsUpdating", "URLSession"]
 - ["PSo23UISearchResultsUpdating", "UserDefaults"]
@@ -1861,7 +1860,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "UIColor"]
 - !private ["PSo16UIStateRestoring", "UISearchBar"]
 - ["PSo16UIStateRestoring", "UISearchController"]
-- !private ["PSo16UIStateRestoring", "URL"]
+- ["PSo16UIStateRestoring", "URL"]
 - !private ["PSo16UIStateRestoring", "URLRequest"]
 - !private ["PSo16UIStateRestoring", "URLSession"]
 - ["PSo16UIStateRestoring", "UserDefaults"]
@@ -1936,7 +1935,7 @@ depends-member:
 - !private ["PSo21UITableViewDataSource", "UIColor"]
 - !private ["PSo21UITableViewDataSource", "UISearchBar"]
 - ["PSo21UITableViewDataSource", "UISearchController"]
-- !private ["PSo21UITableViewDataSource", "URL"]
+- ["PSo21UITableViewDataSource", "URL"]
 - !private ["PSo21UITableViewDataSource", "URLRequest"]
 - !private ["PSo21UITableViewDataSource", "URLSession"]
 - ["PSo21UITableViewDataSource", "UserDefaults"]
@@ -1989,7 +1988,7 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "UIColor"]
 - !private ["PSo19UITableViewDelegate", "UISearchBar"]
 - ["PSo19UITableViewDelegate", "UISearchController"]
-- !private ["PSo19UITableViewDelegate", "URL"]
+- ["PSo19UITableViewDelegate", "URL"]
 - !private ["PSo19UITableViewDelegate", "URLRequest"]
 - !private ["PSo19UITableViewDelegate", "URLSession"]
 - ["PSo19UITableViewDelegate", "UserDefaults"]
@@ -2046,7 +2045,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "UIColor"]
 - !private ["PSo18UITraitEnvironment", "UISearchBar"]
 - ["PSo18UITraitEnvironment", "UISearchController"]
-- !private ["PSo18UITraitEnvironment", "URL"]
+- ["PSo18UITraitEnvironment", "URL"]
 - !private ["PSo18UITraitEnvironment", "URLRequest"]
 - !private ["PSo18UITraitEnvironment", "URLSession"]
 - ["PSo18UITraitEnvironment", "UserDefaults"]
@@ -2148,7 +2147,7 @@ depends-member:
 - ["CSo16UIViewController", "UISearchController"]
 - ["CSo16UIViewController", "UITableView"]
 - ["CSo16UIViewController", "UITableViewCell"]
-- !private ["CSo16UIViewController", "URL"]
+- ["CSo16UIViewController", "URL"]
 - !private ["CSo16UIViewController", "URLRequest"]
 - !private ["CSo16UIViewController", "URLSession"]
 - ["CSo16UIViewController", "UserDefaults"]
@@ -2163,7 +2162,7 @@ depends-member:
 - !private ["CSo16UIViewController", "eventIDString"]
 - !private ["CSo16UIViewController", "hidesNavigationBarDuringPresentation"]
 - !private ["CSo16UIViewController", "imageLocationString"]
-- ["CSo16UIViewController", "imageURL"]
+- ["CSo16UIViewController", "imageUrl"]
 - ["CSo16UIViewController", "indexPathForPreferredFocusedView"]
 - ["CSo16UIViewController", "indexPathForPreferredFocusedViewInTableView"]
 - ["CSo16UIViewController", "init"]
@@ -2247,7 +2246,7 @@ depends-member:
 - ["C17HACodingChallenge14ViewController", "UISearchController"]
 - ["C17HACodingChallenge14ViewController", "UITableView"]
 - ["C17HACodingChallenge14ViewController", "UITableViewCell"]
-- !private ["C17HACodingChallenge14ViewController", "URL"]
+- ["C17HACodingChallenge14ViewController", "URL"]
 - !private ["C17HACodingChallenge14ViewController", "URLRequest"]
 - !private ["C17HACodingChallenge14ViewController", "URLSession"]
 - ["C17HACodingChallenge14ViewController", "UserDefaults"]
@@ -2256,7 +2255,7 @@ depends-member:
 - ["C17HACodingChallenge14ViewController", "defaults"]
 - ["C17HACodingChallenge14ViewController", "deinit"]
 - ["C17HACodingChallenge14ViewController", "downloadJsonWithURL"]
-- ["C17HACodingChallenge14ViewController", "imageURL"]
+- ["C17HACodingChallenge14ViewController", "imageUrl"]
 - ["C17HACodingChallenge14ViewController", "indexPathForPreferredFocusedView"]
 - ["C17HACodingChallenge14ViewController", "indexPathForPreferredFocusedViewInTableView"]
 - ["C17HACodingChallenge14ViewController", "init"]
@@ -2360,7 +2359,7 @@ depends-member:
 - !private ["Ps9_Hashable", "UIColor"]
 - !private ["Ps9_Hashable", "UISearchBar"]
 - ["Ps9_Hashable", "UISearchController"]
-- !private ["Ps9_Hashable", "URL"]
+- ["Ps9_Hashable", "URL"]
 - !private ["Ps9_Hashable", "URLRequest"]
 - !private ["Ps9_Hashable", "URLSession"]
 - ["Ps9_Hashable", "UserDefaults"]
@@ -2634,6 +2633,7 @@ depends-external:
 - "/Users/chrisconner/Desktop/HACodingChallenge/DerivedData/HACodingChallenge/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageOperation.h"
 - "/Users/chrisconner/Desktop/HACodingChallenge/DerivedData/HACodingChallenge/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIView+WebCacheOperation.h"
 - "/Users/chrisconner/Desktop/HACodingChallenge/DerivedData/HACodingChallenge/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageDownloaderOperation.h"
+- "/Users/chrisconner/Desktop/HACodingChallenge/HACodingChallenge/HACodingChallenge-Bridging-Header.h"
 - "/Users/chrisconner/Desktop/HACodingChallenge/DerivedData/HACodingChallenge/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageDownloader.h"
 - "/Users/chrisconner/Desktop/HACodingChallenge/DerivedData/HACodingChallenge/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageDecoder.h"
 - "/Users/chrisconner/Desktop/HACodingChallenge/DerivedData/HACodingChallenge/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageManager.h"
@@ -2641,4 +2641,4 @@ depends-external:
 - "/Users/chrisconner/Desktop/HACodingChallenge/DerivedData/HACodingChallenge/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImage+MultiFormat.h"
 - "/Users/chrisconner/Desktop/HACodingChallenge/DerivedData/HACodingChallenge/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageCompat.h"
 - "/Users/chrisconner/Desktop/HACodingChallenge/DerivedData/HACodingChallenge/Build/Products/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Modules/module.modulemap"
-interface-hash: "c44d02341d96293cee8f9b8449bc4f2f"
+interface-hash: "f4a0cb237a250bdabe95054b60769f80"

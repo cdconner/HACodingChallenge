@@ -27,16 +27,16 @@ class TableViewCell: UITableViewCell {
         imageLocationString = event.locationImage
         eventIDString = event.id
         
-        if imageLocationString != nil {
-            if let url = URL.init(string: imageLocationString) {
-                imgView.downloadedFrom(url: url)
-            } else {
-                imgView.image = UIImage(imageLiteralResourceName: "defaultPlaceholder.png")
-            }
-        }
-        
-        imgView.layer.cornerRadius = 12
-        imgView.clipsToBounds = true
+//        if imageLocationString != nil {
+//            if let url = URL.init(string: imageLocationString) {
+//                imgView.downloadedFrom(url: url)
+//            } else {
+//                imgView.image = UIImage(imageLiteralResourceName: "defaultPlaceholder.png")
+//            }
+//        }
+//        
+//        imgView.layer.cornerRadius = 12
+//        imgView.clipsToBounds = true
     }
     
     //This is to convert our date string to conform with the requirement (This probably belongs in an extension so I don't call it in two places)

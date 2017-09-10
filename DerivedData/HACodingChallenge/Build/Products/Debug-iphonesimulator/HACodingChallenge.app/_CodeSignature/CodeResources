@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Assets.car</key>
+		<data>
+		NHczSa7j/VKKh3tslo2mix3T2J0=
+		</data>
 		<key>BackButton.png</key>
 		<data>
 		mnUvuaMrSlfj2K3H4FLHBYAg+ds=
@@ -22,7 +26,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/DetailViewController.nib</key>
 		<data>
-		MywEooncCA+iiuROunFCA3Ty+E0=
+		iJk58NB+Lygh1NsUIPUvNjHkVHI=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -30,15 +34,15 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-vql-O1-oZr.nib</key>
 		<data>
-		FDun+irstP29UD6sJvoAp5f/Tvs=
+		A4681b4O8jCIZsoYtolosinpxrA=
 		</data>
 		<key>Base.lproj/Main.storyboardc/h5v-O2-CwI-view-U5I-OU-fhM.nib</key>
 		<data>
-		3L0e40Zs4hYmsAz27Ct8vNIdNXg=
+		v2dzZdQjkcxbd8I7EoaAv8KVpQY=
 		</data>
 		<key>Base.lproj/Main.storyboardc/ns1-oB-laV-view-bJv-Jc-FEu.nib</key>
 		<data>
-		UR4n0Bz7VbZ0MrAp5pxRyxX1EN4=
+		oVjFzYmCHW1Y+X3Zb2ybS2817S4=
 		</data>
 		<key>Frameworks/SDWebImage.framework/Info.plist</key>
 		<data>
@@ -94,7 +98,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		m1+vTF705IyBBg9kFW70shSAwmU=
+		nRjwBV4u2dOtz6uYn3jTgsh+n9c=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -119,6 +123,17 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NHczSa7j/VKKh3tslo2mix3T2J0=
+			</data>
+			<key>hash2</key>
+			<data>
+			rzp5QUBO+6QH7homk7D5LJxqEBLsieX11BfKe9tOcTU=
+			</data>
+		</dict>
 		<key>BackButton.png</key>
 		<dict>
 			<key>hash</key>
@@ -167,11 +182,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MywEooncCA+iiuROunFCA3Ty+E0=
+			iJk58NB+Lygh1NsUIPUvNjHkVHI=
 			</data>
 			<key>hash2</key>
 			<data>
-			SSZIvH3kgZeH7I7oVrh2Bojbw9duPoAIvXmvMwijEkc=
+			NyLQyGYAVE7w8cV0OO9ADw6YsSPtFcw/mPl2zn1yiFg=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
@@ -189,33 +204,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FDun+irstP29UD6sJvoAp5f/Tvs=
+			A4681b4O8jCIZsoYtolosinpxrA=
 			</data>
 			<key>hash2</key>
 			<data>
-			xZWdq/Eb5og9TyTnRzMLHEuNnws7biRzDwGUqbBlnwI=
+			wKnSPiOow6kSxFkSyQBT4YhEO1eoOJkZ08R0EVwY2GI=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/h5v-O2-CwI-view-U5I-OU-fhM.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3L0e40Zs4hYmsAz27Ct8vNIdNXg=
+			v2dzZdQjkcxbd8I7EoaAv8KVpQY=
 			</data>
 			<key>hash2</key>
 			<data>
-			95wHdIa8egwaxMQzhwNeLlqcGapzvsBlIKhFQsZdB3o=
+			c61SN5fzEHRSl38m3n2dnBdQnLhs8cWeov9q1LtDZlk=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/ns1-oB-laV-view-bJv-Jc-FEu.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UR4n0Bz7VbZ0MrAp5pxRyxX1EN4=
+			oVjFzYmCHW1Y+X3Zb2ybS2817S4=
 			</data>
 			<key>hash2</key>
 			<data>
-			k/t3NocIts4aKM1cszGm7bY0KfjqgeXt+NnSlKoHXQE=
+			pcUoGY1hsVMlZ8uLizUqCpdXFPEYl5vPWxLmhU+95oE=
 			</data>
 		</dict>
 		<key>Frameworks/SDWebImage.framework/Info.plist</key>

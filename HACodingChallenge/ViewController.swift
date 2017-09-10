@@ -61,8 +61,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let seatGeekClientID = "ODgwMzA0OHwxNTA0NzM4MTE2LjI1"
         let searchQuery = searchText
         let eventURL = baseURL + "events?client_id=\(seatGeekClientID)&q=\(searchQuery)"
-        
-        
         let url = URL(string: eventURL)
         
         var request = URLRequest(url: url as! URL)
@@ -70,15 +68,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         URLSession.shared.dataTask(with: (url!), completionHandler: {(data, response, error) -> Void in
             
             if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
-//                print(jsonObj!.value(forKey: "events"))
-
+                //                print(jsonObj!.value(forKey: "events"))
+                
                 // Pull out items we need
                 // Create temp dictionary
                 // Input into dictionary
                 // Create event with dictionary
                 
                 if let eventsArray = jsonObj!.value(forKey: "events") as? [[String:Any]] {
-                    
                     for event in eventsArray {
                         
                         // Grabbing all the information I need. Digging through JSON
@@ -92,10 +89,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                         // Had to dig to some sub-nodes
                         let venueDict = event["venue"] as! [String:Any]
                         let location = venueDict["display_location"] as! String
-                        
                         let performersArray = event["performers"] as! [[String:Any]]
                         let searchedItemDict = performersArray.first!
-                        
                         let locationImage = searchedItemDict["image"] as? String
                         
                         
@@ -107,13 +102,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                             "display_location": location,
                             "image": locationImage
                         ]
-                        
                         let newEvent = Event(data: tempDict as Any as! [String : Any])
-                        
                         self.myEvents.append(newEvent)
                     }
                 }
-                
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -138,8 +130,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
         let event = myEvents[indexPath.row]
-        let imageUrl = URL(string: event.locationImage!)
-        cell.imgView.sd_setImage(with: imageUrl, placeholderImage:nil)
+        //What I have below works to let me display the images again but it doesn't solve the issue with images being in the wrong place on tablewViews
+        if let urlTest = event.locationImage {
+            cell.imgView?.sd_setImage(with: URL(string: event.locationImage!), placeholderImage: #imageLiteral(resourceName: "Placeholder"))
+        }
         cell.setEvent(event: event)
         cell.convertDateFormatter(date: event.dateTime!)
         cell.heartCheck()
@@ -148,19 +142,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     //To send users from the TableView to the Detail View with the necessary info
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        
         let event = myEvents[indexPath.row]
-        
         vc.titleString = event.title
         vc.dateAndTimeString = event.dateTime
         vc.cityString = event.location
         vc.imageLocationString = event.locationImage
         vc.eventIDString = event.id
-        
         navigationController?.pushViewController(vc, animated: true)
-        
         searchController.dismiss(animated: false, completion: nil)
     }
 }
